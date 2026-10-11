@@ -1,0 +1,54 @@
+{
+  "id": "tunekit",
+  "name": "TuningKit",
+  "version": "0.2.0",
+  "description": "Fine-Tuning Kit",
+  "entry": "index.jsx",
+  "icon": "icon.png",
+  "offline_capable": false,
+  "offline": {
+    "reads": false,
+    "writes": "none",
+    "execution": "none"
+  },
+  "permissions": {},
+  "service": {
+    "entry": "service.py",
+    "access": "self",
+    "id": "tunekit"
+  },
+  "source_files": [
+    "MobiusTheme.js",
+    "service.py",
+    "prompt_router.jsonl",
+    "README.md"
+  ],
+  "imports": [
+    "react",
+    "react-dom",
+    "@openai/apps-sdk-ui/components/Icon",
+    "recharts"
+  ],
+  "package_id": "ad2853b7-505f-415c-b498-7fac768aaf96",
+  "store": {
+    "tagline": "Guided fine-tuning workflow. Requires the Tuning Engine app.",
+    "description": "Fine-Tuning Kit",
+    "screenshots": [
+      {
+        "src": "static/store/tuningkit-setup.png",
+        "alt": "TuningKit setup: training method, model, and the dataset picker showing the prompt-router and Alpaca starters.",
+        "label": "Pick a method, model, and starter dataset"
+      },
+      {
+        "src": "static/store/tuningkit-training.png",
+        "alt": "TuningKit training view with run progress, checkpoints, and live loss, learning-rate, and gradient-norm charts.",
+        "label": "Watch training live"
+      },
+      {
+        "src": "static/store/tuningkit-eval.png",
+        "alt": "TuningKit evaluation comparing a fine-tuned checkpoint with the base model on held-out examples and benchmarks.",
+        "label": "Compare against the base model"
+      }
+    ]
+  }
+}
